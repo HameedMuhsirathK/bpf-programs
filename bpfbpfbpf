@@ -1,0 +1,7 @@
+#include <uapi/linux/ptrace.h>
+
+int hello(struct pt_regs *ctx)
+{
+    bpf_trace_printk("Hello from eBPF!\\n");
+    return 0;
+}
